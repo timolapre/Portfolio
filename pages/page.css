@@ -1,0 +1,54 @@
+:root{
+    --green: #41c97f;
+    --black: black;
+    --white: white;
+    --grey: #364347;
+    --shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.pageheader{
+    background-color: var(--grey);
+    color: var(--white);
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.pageheader .grid{
+    width: 600px;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+
+.homebutton{
+    cursor: pointer;
+}
+
+.page .gridborder{
+    margin: 3rem 0 3rem 0;
+}
+
+.page .grid{
+    width: 50vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.page .grid .text{
+    margin: 1rem;
+}
+
+.page .grid .images{
+    height: 400px;
+    width: 300px;
+}
+
+.page .grid .images .img{
+    display: block;
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.youtube{
+    margin-bottom: 2rem;
+}

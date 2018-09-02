@@ -1,0 +1,442 @@
+:root{
+    --green: #41c97f;
+    --black: black;
+    --white: white;
+    --grey: #364347;
+    --shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+*{
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.dark{
+    color: var(--grey);
+}
+
+.light{
+    color: var(--white);
+}
+
+.green{
+    color: var(--green);
+}
+
+h1{
+    font-size: xx-large;
+}
+
+.center{
+    text-align: center;
+}
+
+.vertcenter{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.horcenter{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+button{
+    background-color: var(--black);
+    border: none;
+    color: var(--white);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 3px;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+}
+
+input{
+    height: 30px;
+}
+
+.about{
+    margin: 0 20rem 2rem 20rem;
+}
+
+.about .info{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.about .img{
+    background-image: url(Images/pf.jpg);
+    background-position: -9px -88px;
+    background-size: 150%;
+    height: 200px;
+    width: 200px;
+    border-radius: 1000px;
+    margin-left: 50px;
+    border: var(--green) solid 10px;
+    box-shadow: var(--shadow);
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--grey);
+    margin-bottom: 4rem;
+    box-shadow: var(--shadow);
+    background-image: url(Images/line\ bg2.PNG);
+    background-size: cover;
+    background-position: center center;
+}
+
+.header .title{
+    color: var(--white);
+    text-align: center;
+}
+
+.page .title{
+    font-size: 25px;
+    margin-bottom: 2rem;
+}
+
+.skillpage{
+    font-size: 20px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.skillpage .row{
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: repeat(2,50%);
+}
+
+.skillpage .column{
+    position: relative;
+    text-align: left;
+}
+
+.skillpage ul p{
+    margin: 35px 0 30px 100px;
+    font-weight: bold;
+}
+
+.skillpage .levels{
+    position: absolute;
+    left: 250px;
+    bottom: 300px;
+    width: auto;
+}
+
+.bar{
+    height: 22px;
+    left: -10px;
+    background-color: var(--black);
+    position: absolute;
+    margin-top: -25px;
+    border-radius: 100px;
+}
+
+.barempty{
+    height: 20px;
+    left: -10px;
+    width: 100%;
+    position: absolute;
+    border: 1px solid var(--black);
+    margin-top: -25px;
+    border-radius: 100px;
+    box-shadow: var(--shadow);
+}
+
+.skillpage .right{
+    left: 20px;
+}
+
+.skills{
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    margin: 0 10rem 4rem 10rem;
+    font-weight: bold;
+}
+
+.skills .title{
+    font-size: 30px;
+    margin-bottom: 0rem;
+}
+
+.skill{
+    box-sizing: border-box;
+    background-color: var(--green);
+    padding: 2rem;
+    margin: 1rem;
+    box-shadow: var(--shadow);
+    height: 400px;
+    width: 300px;
+    background-position: center;
+}
+
+.skill .desc p{
+    margin: 0.7rem 2rem 2rem 2rem;
+}
+
+.skill ul{
+    text-align: left;
+    margin-left: 3rem;
+}
+
+.skill ul li{
+    padding: 0.3rem;
+}
+
+.skill .button{
+    position: relative;
+    height: 85%;
+}
+
+.skill .button button{
+    position: absolute;
+    bottom: 0px;
+}
+
+.darkbg{
+    background-color: var(--grey);
+    color: var(--white);
+}
+
+.reviewpage{
+    margin-bottom: 4rem;
+    padding: 4rem;
+    box-shadow: var(--shadow);
+}
+
+.reviews{
+    display: grid;
+    grid-template-columns: repeat(3,33.333333%);
+    box-sizing: border-box;
+    align-self: center;
+}
+
+.reviews .text{
+    margin-bottom: 25px;
+}
+
+.review{
+    margin: 25px;
+}
+
+.stars{
+    width: 100px;
+    display: grid;
+    grid-template-columns: repeat(5,20%);
+    box-sizing: border-box;
+    align-self: center;
+    margin-bottom: 25px;
+}
+
+.star{
+    background-color: #fff;
+    height: 8px;
+    width: 8px;
+    border-radius: 100px;
+}
+
+.myworks{
+    box-sizing: border-box;
+    box-shadow: var(--shadow);
+    margin-bottom: 4rem;
+}
+
+.mywork{
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: repeat(2,50%);
+    height: 30rem;
+}
+
+.mywork > *{
+    padding: 2rem;
+}
+
+.devimage{
+    background-image: url(Images/dev.jpeg);
+}
+
+.footer{
+    padding: 5rem;
+    margin-top: 4rem;
+}
+
+.contact{
+    align-self: center;
+    width: 40rem;
+    box-sizing: border-box;
+}
+
+.personinfo * *{
+    box-sizing: border-box;
+    margin: 0.25rem 0 0.25rem 0;
+    width: 100%;
+    padding: 5px 10px 5px 10px;
+}
+
+.message{
+    margin: 1rem 0 0.3rem 0;
+    width: 100%;
+}
+
+.message *{
+    margin: 0.25rem 0 0.25rem 0;
+    box-sizing: border-box;
+}
+
+.message textarea{
+    width: 100%;
+    min-height: 150px;
+    padding: 10px;
+    resize: none;
+}
+
+.footer .socialmedia{
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    width: 600px;
+    cursor: pointer;
+}
+
+.footer .socialmedia a{
+    text-decoration: none;
+    color: white;
+}
+
+a:visited { 
+    text-decoration: none;
+    color: white;
+}
+
+.contactpagetext{
+    position: relative;
+}
+
+.contactpage{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: var(--green);
+    left: 0;
+    top: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+    .skills{
+        display: grid;
+        grid-template-columns: repeat(3, 33%);
+        margin: 0 2rem 4rem 2rem;
+    }    
+    .skillpage .row{
+        display: block;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    .reviews{
+        display: block;
+        grid-template-columns: repeat(3,33.333333%);
+        box-sizing: border-box;
+        align-self: center;
+    }
+    .header{
+        height: 30vh;
+    }
+
+    .about{
+        margin: 0 2rem 2rem 2rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .skills{
+        display: block;
+        grid-template-columns: repeat(3, 33%);
+        margin: 0 0rem 4rem 0rem;
+    }    
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 800px;
+    height: 520px;
+    box-shadow: var(--shadow);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    margin: 0 0 1rem 0;
+    padding: 1rem 0 1rem 0;
+    background-color: var(--green);
+    color: white;
+    box-shadow: var(--shadow);
+}
+
+.modal-body {padding: 2px 16px;}
+
+.sendmessage {
+    position: absolute;
+    margin-bottom: 1.5rem;
+    bottom: 0;
+}

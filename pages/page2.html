@@ -1,0 +1,21 @@
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+
+<div class="loadpage"></div>
+
+<script>
+
+    var pagetext = ["Internet Gekkies", "This soundboard with sounds from funny dutch videos was made for a big instagram and facebook page with over 400.000 followers. The app was made with HTML5, CSS and Javascript with Jquery.",
+        '../Images/internetgekkies\ proj.png', "https://www.youtube.com/embed/LEssXibYKZM"]
+
+    $(document).ready(function () {
+
+        $(".loadpage").load("ProjectPage.html", function () {
+            $(".projpage").each(function () {
+                $(this).html(pagetext[$(this).attr('id')]);
+            });
+            $(".projpageimg").attr('src', pagetext[2]);
+            $(".projpagevid").attr('src', pagetext[3]);
+        });
+
+    });
+</script>
