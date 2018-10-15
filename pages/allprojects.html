@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="../pages/page.css">
+    <link rel="stylesheet" type="text/css" href="../pages/allproj.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body id="1">
+
+    <div class="pageheader center dark horcenter">
+        <div class="grid">
+            <div class="homebutton vertcenter">
+                <p class="homebutton">homepage</p>
+            </div>
+            <h2>Timo Lapre Projects</h2>
+        </div>
+    </div>
+
+    <div class="page dark center">
+
+        <div class="page center dark">
+            <div class="horcenter">
+                <div class="allproj">
+                </div>
+            </div>
+        </div>
+
+        <div class="contactpagetext page center dark">
+                <div class="title">
+                    <h2>I can help.</h2>
+                    <h1 style="font-size: 20px; margin-top: 30px;">I am currently available for freelance work.</h1>
+                </div>
+                <div class="text horcenter">
+                    <p style="margin: 10px 0 50px 0; width: 80%">If you have a project that you want to get started, think you need
+                        my help with something or just fancy saying hey, then get in touch.</p>
+                </div>
+                <button style="margin-bottom: 50px;" class="greenbut" id="myBtn">Message Me</button>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h2>Message Me</h2>
+                        </div>
+                        <form action="/action.php">
+                            <div class="modal-body">
+                                <div class="horcenter">
+                                    <div class="contact">
+                                        <div class="personinfo">
+                                            <div class="name">
+                                                <p>Name</p>
+                                                <input type="name">
+                                            </div>
+                                            <div class="email">
+                                                <p>Email</p>
+                                                <input type="email">
+                                            </div>
+                                        </div>
+                                        <div class="message">
+                                            <p>How can I help you?</p>
+                                            <textarea></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="horcenter">
+                                <div class="sendmessage">
+                                    <button class="greenbut" type="submit">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+        
+                </div>
+            </div>
+
+        <div class="footer darkbg">
+            <div class="horcenter">
+                <div class="socialmedia">
+                    <a href="https://www.facebook.com/timo.lapre" target="_blank" class="greenbut">Facebook</a>
+                    <a href="https://www.instagram.com/timolapre_/" target="_blank" class="greenbut">Instagram</a>
+                    <a href="https://www.youtube.com/channel/UC4bASN3cdeMrncX6Sg2Ijdw" target="_blank" class="greenbut">Youtube</a>
+                    <a href="https://github.com/timolapre" target="_blank" class="greenbut">Github</a>
+                    <p class="greenbut"> &emsp; Message Me</p>
+                </div>
+            </div>
+            <p style="margin-top: 2rem;">Timo Lapre 2018</p>
+        </div>
+    </div>
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="page.js"></script>
+    <script src="../slider.js"></script>
+    <script>
+
+    $(document).ready(function () {
+        listlength = myWorkList.length;
+
+        for(i=0; i<listlength;i++){
+            $(".allproj").append('<div class="horcenter" id='+(i%myWorkList.length+1)+'>' +
+                                        '<div class="skill" style="background-image: url(../'+myWorkList[i%myWorkList.length][1]+');">' +
+                                            '<div class="title '+ myWorkList[i%myWorkList.length][2] +'">' +
+                                                '<p>' + myWorkList[i%myWorkList.length][0] + '</p>' +
+                                            '</div>' +
+                                            '<div class="button horcenter">' +
+                                                '<button class="greenbut pagebut" id='+(i%myWorkList.length+1)+'>Read More</button>' +
+                                            '</div>' +
+                                        '</div>' +
+                                    '</div>');
+        }
+    });
+
+    </script>
+    <script src="../code.js"></script>
+</body>

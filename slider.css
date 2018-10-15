@@ -1,0 +1,138 @@
+.skillpage .right{
+    left: 20px;
+}
+
+.slideshow{
+    position: relative;
+    overflow: hidden;
+    height: 100px;
+    width: 78%;
+}
+
+.skills{
+    position: absolute;
+    display: grid;
+    font-weight: bold;
+}
+
+.skills .title{
+    font-size: 30px;
+    margin-bottom: 0rem;
+}
+
+.skill{
+    box-sizing: border-box;
+    background-color: var(--green);
+    padding: 2rem;
+    margin: 1rem;
+    box-shadow: var(--shadow);
+    height: 400px;
+    width: 300px;
+    background-position: center;
+}
+
+.skill .desc p{
+    margin: 0.7rem 2rem 2rem 2rem;
+}
+
+.skill ul{
+    text-align: left;
+    margin-left: 3rem;
+}
+
+.skill ul li{
+    padding: 0.3rem;
+}
+
+.skill .button{
+    position: relative;
+    height: 85%;
+}
+
+.skill .button button{
+    position: absolute;
+    bottom: 0px;
+}
+
+.arrows{
+    position: relative;    
+    height: 100%;
+    background-color: red;
+}
+
+.arrow{
+    position: absolute;
+    width: 40px;
+    height: 40px;    
+    background-color: black;
+    top: 200px;
+    padding: 0;
+}
+
+.arrows .a1{
+    left: 100px;
+}
+
+.arrows .a2{
+    right: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root{
+    --green: #41c97f;
+    --black: black;
+    --white: white;
+    --grey: #364347;
+    --shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+*{
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+button{
+    background-color: var(--black);
+    border: none;
+    color: var(--white);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 3px;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+}
+
+.center{
+    text-align: center;
+}
+
+.vertcenter{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.horcenter{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}

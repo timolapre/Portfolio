@@ -160,14 +160,36 @@ input{
     left: 20px;
 }
 
+.slideshow{
+    position: relative;
+    overflow: hidden;
+    height: 100px;
+    width: 1328px;
+    margin-bottom: 1.2rem;
+}
+
+.seeallbut{
+    margin-bottom: 2rem;
+}
+
 .skills{
+    position: absolute;
     display: grid;
-    grid-template-columns: repeat(3, 33%);
-    margin: 0 10rem 4rem 10rem;
     font-weight: bold;
 }
 
 .skills .title{
+    font-size: 30px;
+    margin-bottom: 0rem;
+}
+
+.skills2{
+    position: absolute;
+    display: grid;
+    font-weight: bold;
+}
+
+.skills2 .title{
     font-size: 30px;
     margin-bottom: 0rem;
 }
@@ -325,6 +347,10 @@ a:visited {
     position: relative;
 }
 
+.contactpage p{
+    width: 100px;
+}
+
 .contactpage{
     position: absolute;
     width: 300px;
@@ -332,40 +358,6 @@ a:visited {
     background-color: var(--green);
     left: 0;
     top: 0;
-}
-
-@media only screen and (max-width: 1024px) {
-    .skills{
-        display: grid;
-        grid-template-columns: repeat(3, 33%);
-        margin: 0 2rem 4rem 2rem;
-    }    
-    .skillpage .row{
-        display: block;
-        box-sizing: border-box;
-        overflow: hidden;
-    }
-    .reviews{
-        display: block;
-        grid-template-columns: repeat(3,33.333333%);
-        box-sizing: border-box;
-        align-self: center;
-    }
-    .header{
-        height: 30vh;
-    }
-
-    .about{
-        margin: 0 2rem 2rem 2rem;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .skills{
-        display: block;
-        grid-template-columns: repeat(3, 33%);
-        margin: 0 0rem 4rem 0rem;
-    }    
 }
 
 /* The Modal (background) */
@@ -389,7 +381,7 @@ a:visited {
     background-color: #fefefe;
     margin: auto;
     padding: 0;
-    width: 800px;
+    width: 768px;
     height: 520px;
     box-shadow: var(--shadow);
     -webkit-animation-name: animatetop;
@@ -439,4 +431,78 @@ a:visited {
     position: absolute;
     margin-bottom: 1.5rem;
     bottom: 0;
+}
+
+/* slider style */
+.slider{
+    text-align: center;
+}
+
+@media only screen and (max-width: 1328px){
+    .slideshow{
+        width: 996px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {   
+    .skillpage .row{
+        display: block;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    .reviews{
+        display: block;
+        grid-template-columns: repeat(3,33.333333%);
+        box-sizing: border-box;
+        align-self: center;
+    }
+    .header{
+        height: 30vh;
+    }
+
+    .about{
+        margin: 0 2rem 2rem 2rem;
+    }
+
+    .slideshow{
+        width: 664px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .about .info{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    .info .img{
+        margin-top: 2rem;
+        margin-left: 0;
+    }
+    .reviewpage{
+        margin-bottom: 4rem;
+        padding: 4rem 0.5rem 4rem 0.5rem;
+        box-shadow: var(--shadow);
+    }
+    .footer{
+        font-size: 20px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .footer .socialmedia{
+        grid-template-columns: repeat(2, 50%);
+    }
+    .footer .socialmedia *{
+        margin-bottom: 1rem;
+    }
+    .modal-content {
+        width: 550px;
+    }
+}
+@media only screen and (max-width: 664px) {
+    .slideshow{
+        width: 332px;
+    }
+    .skills{
+        left: 0;
+    }
 }

@@ -1,0 +1,70 @@
+.allproj{
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    box-sizing: border-box;
+    align-self: center;
+    margin-bottom: 5rem;
+}
+
+.allproj2{
+    position: absolute;
+    display: grid;
+    font-weight: bold;
+}
+
+.skills .title{
+    font-size: 30px;
+    margin-bottom: 0rem;
+}
+
+.skill{
+    box-sizing: border-box;
+    background-color: var(--green);
+    padding: 2rem;
+    margin: 1rem;
+    box-shadow: var(--shadow);
+    height: 400px;
+    width: 300px;
+    background-position: center;
+}
+
+.skill .desc p{
+    margin: 0.7rem 2rem 2rem 2rem;
+}
+
+.skill ul{
+    text-align: left;
+    margin-left: 3rem;
+}
+
+.skill ul li{
+    padding: 0.3rem;
+}
+
+.skill .button{
+    position: relative;
+    height: 85%;
+}
+
+.skill .button button{
+    position: absolute;
+    bottom: 0px;
+}
+
+@media only screen and (max-width: 1328px){
+    .allproj{
+        grid-template-columns: repeat(3,33.3333%);
+    }
+}
+
+@media only screen and (max-width: 1023px) {   
+    .allproj{
+        grid-template-columns: repeat(2,50%);
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .allproj{
+        grid-template-columns: repeat(1,100%);
+    }
+}
