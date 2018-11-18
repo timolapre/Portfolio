@@ -1,4 +1,4 @@
-.allproj{
+.allprojold{
     display: grid;
     grid-template-columns: repeat(4,25%);
     box-sizing: border-box;

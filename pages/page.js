@@ -14,5 +14,4 @@ $(document).ready(function(){
     $(".homebutton").on("mouseleave", function(){
         $(this).css("color", "white");
     });
-
  });

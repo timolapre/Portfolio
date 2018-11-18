@@ -130,10 +130,12 @@ input{
 }
 
 .skillpage .levels{
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(4,25%);
     position: absolute;
-    left: 250px;
     bottom: 300px;
-    width: auto;
+    width: 50vw;
 }
 
 .bar{
@@ -467,6 +469,20 @@ a:visited {
     .slideshow{
         width: 664px;
     }
+    .skillpage .right{
+        left: 0px;
+    }
+    .skillpage .levels{
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(4,25%);
+        position: absolute;
+        bottom: 265px;
+        width: 100vw;
+    }
+    .skillpage .right .levels{
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -504,5 +520,10 @@ a:visited {
     }
     .skills{
         left: 0;
+    }
+    .skillpage .levels{
+        font-size: 15px;
+        text-align: center;
+        bottom: 265px;
     }
 }

@@ -10,7 +10,7 @@
     background-color: var(--grey);
     color: var(--white);
     padding: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
 }
 
 .pageheader .grid{
@@ -28,6 +28,7 @@
 }
 
 .page .grid{
+    position: relative;
     width: 50vw;
     display: grid;
     grid-template-columns: 50% 50%;
@@ -62,6 +63,29 @@
     height: 400px;
 }
 
+.white{
+    color: var(--white);
+}
+
+.darkbg2{
+    position: absolute;
+    bottom: -10%;
+    left: -50%;
+    z-index: -1;
+    width: 100vw;
+    height: 120%;
+    background-color: var(--grey);
+}
+
+.projgrid{
+    width: 100vw;
+    margin-bottom: 0rem;
+    padding: 2.5rem 0 2.5rem 0;
+}
+
+.projbutton{
+    margin-top: 2rem;
+}
 
 @media only screen and (max-width: 1328px){
 }

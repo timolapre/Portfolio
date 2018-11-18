@@ -25,60 +25,62 @@
 
     <div class="page dark center">
 
-        <div class="page center dark">
-            <div class="horcenter">
-                <div class="allproj">
-                </div>
+        <div class="horcenter">
+            <div class="gridborder allproj">
             </div>
         </div>
 
+        <div class="modal ytborder">
+            <iframe class="ytvid" src="" frameborder="0" width="800" height="450" allowfullscreen></iframe>
+        </div>
+
         <div class="contactpagetext page center dark">
-                <div class="title">
-                    <h2>I can help.</h2>
-                    <h1 style="font-size: 20px; margin-top: 30px;">I am currently available for freelance work.</h1>
-                </div>
-                <div class="text horcenter">
-                    <p style="margin: 10px 0 50px 0; width: 80%">If you have a project that you want to get started, think you need
-                        my help with something or just fancy saying hey, then get in touch.</p>
-                </div>
-                <button style="margin-bottom: 50px;" class="greenbut" id="myBtn">Message Me</button>
-                <div id="myModal" class="modal">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <span class="close">&times;</span>
-                            <h2>Message Me</h2>
-                        </div>
-                        <form action="/action.php">
-                            <div class="modal-body">
-                                <div class="horcenter">
-                                    <div class="contact">
-                                        <div class="personinfo">
-                                            <div class="name">
-                                                <p>Name</p>
-                                                <input type="name">
-                                            </div>
-                                            <div class="email">
-                                                <p>Email</p>
-                                                <input type="email">
-                                            </div>
+            <div class="title">
+                <h2>I can help.</h2>
+                <h1 style="font-size: 20px; margin-top: 30px;">I am currently available for freelance work.</h1>
+            </div>
+            <div class="text horcenter">
+                <p style="margin: 10px 0 50px 0; width: 80%">If you have a project that you want to get started, think you
+                    need my help with something or just fancy saying hey, then get in touch.</p>
+            </div>
+            <button style="margin-bottom: 50px;" class="greenbut" id="myBtn">Message Me</button>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h2>Message Me</h2>
+                    </div>
+                    <form action="/action.php">
+                        <div class="modal-body">
+                            <div class="horcenter">
+                                <div class="contact">
+                                    <div class="personinfo">
+                                        <div class="name">
+                                            <p>Name</p>
+                                            <input type="name">
                                         </div>
-                                        <div class="message">
-                                            <p>How can I help you?</p>
-                                            <textarea></textarea>
+                                        <div class="email">
+                                            <p>Email</p>
+                                            <input type="email">
                                         </div>
+                                    </div>
+                                    <div class="message">
+                                        <p>How can I help you?</p>
+                                        <textarea></textarea>
                                     </div>
                                 </div>
                             </div>
-                            <div class="horcenter">
-                                <div class="sendmessage">
-                                    <button class="greenbut" type="submit">Send Message</button>
-                                </div>
+                        </div>
+                        <div class="horcenter">
+                            <div class="sendmessage">
+                                <button class="greenbut" type="submit">Send Message</button>
                             </div>
-                        </form>
-                    </div>
-        
+                        </div>
+                    </form>
                 </div>
+
             </div>
+        </div>
 
         <div class="footer darkbg">
             <div class="horcenter">
@@ -99,22 +101,69 @@
     <script src="../slider.js"></script>
     <script>
 
-    $(document).ready(function () {
-        listlength = myWorkList.length;
+        $(document).ready(function () {
+            listlength = myWorkList.length;
 
-        for(i=0; i<listlength;i++){
-            $(".allproj").append('<div class="horcenter" id='+(i%myWorkList.length+1)+'>' +
-                                        '<div class="skill" style="background-image: url(../'+myWorkList[i%myWorkList.length][1]+');">' +
-                                            '<div class="title '+ myWorkList[i%myWorkList.length][2] +'">' +
-                                                '<p>' + myWorkList[i%myWorkList.length][0] + '</p>' +
-                                            '</div>' +
-                                            '<div class="button horcenter">' +
-                                                '<button class="greenbut pagebut" id='+(i%myWorkList.length+1)+'>Read More</button>' +
-                                            '</div>' +
-                                        '</div>' +
-                                    '</div>');
-        }
-    });
+            for (i = 0; i < listlength; i++) {
+                if (i % 2 == 0) {
+                    $(".allproj").append('<div class="projgrid">' +
+                        '<div class="horcenter">' +
+                        '<div class="grid">' +
+                        '<div class="text vertcenter">' +
+                        '<div class="title">' +
+                        '<h2 class="projtitle">' + myWorkList[i][0] + '</h2>' +
+                        '</div>' +
+                        '<div class="text">' +
+                        '<p class="projdesc">' + myWorkList[i][5] + '</p>' +
+                        '<p class="projdesc">--------------------</p>' +
+                        '<p class="projdesc">' + myWorkList[i][4] + '</p>' +
+                        '<button id="' + i + '" class="ytbut projbutton greenbut">Watch Video</button>' +
+                        '</div>' +
+                        '</div>' +
+                        '<div class="images">' +
+                        '<img src=" ../' + myWorkList[i][1] + '" alt="" class="img projpageimg">' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '<!--<iframe class="projpagevid" frameborder="0" width="650" height="365" src="' + myWorkList[i][3] + '"></iframe>-->' +
+                        '</div>');
+                }
+                else {
+                    $(".allproj").append('<div class="projgrid darkbg">' +
+                        '<div class="horcenter">' +
+                        '<div class="grid">' +
+                        '<div class="images">' +
+                        '<img src=" ../' + myWorkList[i][1] + '" alt="" class="img projpageimg">' +
+                        '</div>' +
+                        '<div class="text vertcenter">' +
+                        '<div class="title">' +
+                        '<h2 class="projtitle">' + myWorkList[i][0] + '</h2>' +
+                        '</div>' +
+                        '<div class="text">' +
+                        '<p class="projdesc">' + myWorkList[i][5] + '</p>' +
+                        '<p class="projdesc">--------------------</p>' +
+                        '<p class="projdesc">' + myWorkList[i][4] + '</p>' +
+                        '<button id="'+ i + '" class="ytbut projbutton greenbut">Watch Video</button>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '<!--<iframe class="projpagevid" frameborder="0" width="650" height="365" src="' + myWorkList[i][3] + '"></iframe>-->' +
+                        '</div>');
+                }
+            }
+
+            $(".ytbut").on("click", function () {
+                var id = $(this).attr('id');
+                $(".ytvid").attr('src', myWorkList[id][3]);
+                $(".ytborder").css("display", "block");
+            })
+
+            $(".ytborder").on("click", function () {
+                $(".ytvid").attr('src', "");
+                $(".ytborder").css("display", "none");
+            })
+        });
 
     </script>
     <script src="../code.js"></script>
