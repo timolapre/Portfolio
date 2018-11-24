@@ -13,13 +13,13 @@ $(document).ready(function(){
     });
 
     $(".pagebut").click(function(){
-        window.location.href = '../pages/allprojects.html' + '#'+ $(this).attr('id');
+        window.location.href = '/pages/allprojects.html' + '#'+ $(this).attr('id');
         //location.reload();
         //window.open("../pages/page" + $(this).attr('id') + ".html","_self");
     });
 
     $(".seeallbut").click(function(){
-        window.open("../pages/allprojects.html", "_self");
+        window.open("/pages/allprojects.html", "_self");
     });
 
     $(".loadfooter").load("footer.html");
