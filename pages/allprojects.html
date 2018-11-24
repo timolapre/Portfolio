@@ -89,7 +89,7 @@
                     <a href="https://www.instagram.com/timolapre_/" target="_blank" class="greenbut">Instagram</a>
                     <a href="https://www.youtube.com/channel/UC4bASN3cdeMrncX6Sg2Ijdw" target="_blank" class="greenbut">Youtube</a>
                     <a href="https://github.com/timolapre" target="_blank" class="greenbut">Github</a>
-                    <p class="greenbut"> &emsp; Message Me</p>
+                    <p class="greenbut" id="myBtn2"> &emsp; Message Me</p>
                 </div>
             </div>
             <p style="margin-top: 2rem;">Timo Lapre 2018</p>
@@ -106,7 +106,7 @@
 
             for (i = 0; i < listlength; i++) {
                 if (i % 2 == 0) {
-                    $(".allproj").append('<div class="projgrid">' +
+                    $(".allproj").append('<div id="' + (i+1) + '" class="projgrid">' +
                         '<div class="horcenter">' +
                         '<div class="grid">' +
                         '<div class="text vertcenter">' +
@@ -114,13 +114,14 @@
                         '<h2 class="projtitle">' + myWorkList[i][0] + '</h2>' +
                         '</div>' +
                         '<div class="text">' +
-                        '<p class="projdesc">' + myWorkList[i][5] + '</p>' +
+                        '<p class="projdesc">' + myWorkList[i][6] + '</p>' +
                         '<p class="projdesc">--------------------</p>' +
-                        '<p class="projdesc">' + myWorkList[i][4] + '</p>' +
-                        '<button id="' + i + '" class="ytbut projbutton greenbut">Watch Video</button>' +
+                        '<p class="projdesc">' + myWorkList[i][5] + '</p>' +
+                        (myWorkList[i][3] != '' ? '<button id="' + i + '" class="ytbut projbutton greenbut">Watch Video</button> ' : '') +
+                        (myWorkList[i][4] != '' ? '<button id="' + i + '" class="dbut projbutton greenbut">Download</button>' : '') +
                         '</div>' +
                         '</div>' +
-                        '<div class="images">' +
+                        '<div class="images horcenter">' +
                         '<img src=" ../' + myWorkList[i][1] + '" alt="" class="img projpageimg">' +
                         '</div>' +
                         '</div>' +
@@ -129,10 +130,10 @@
                         '</div>');
                 }
                 else {
-                    $(".allproj").append('<div class="projgrid darkbg">' +
+                    $(".allproj").append('<div id="' + (i+1) + '" class="projgrid darkbg">' +
                         '<div class="horcenter">' +
                         '<div class="grid">' +
-                        '<div class="images">' +
+                        '<div class="images horcenter">' +
                         '<img src=" ../' + myWorkList[i][1] + '" alt="" class="img projpageimg">' +
                         '</div>' +
                         '<div class="text vertcenter">' +
@@ -140,10 +141,11 @@
                         '<h2 class="projtitle">' + myWorkList[i][0] + '</h2>' +
                         '</div>' +
                         '<div class="text">' +
-                        '<p class="projdesc">' + myWorkList[i][5] + '</p>' +
+                        '<p class="projdesc">' + myWorkList[i][6] + '</p>' +
                         '<p class="projdesc">--------------------</p>' +
-                        '<p class="projdesc">' + myWorkList[i][4] + '</p>' +
-                        '<button id="'+ i + '" class="ytbut projbutton greenbut">Watch Video</button>' +
+                        '<p class="projdesc">' + myWorkList[i][5] + '</p>' +
+                        (myWorkList[i][3] != '' ? '<button id="' + i + '" class="ytbut projbutton greenbut">Watch Video</button> ' : '') +
+                        (myWorkList[i][4] != '' ? '<button id="' + i + '" class="dbut projbutton greenbut">Download</button>' : '') +
                         '</div>' +
                         '</div>' +
                         '</div>' +
@@ -152,6 +154,12 @@
                         '</div>');
                 }
             }
+
+
+            $(".dbut").on("click", function () {
+                var id = $(this).attr('id');
+                window.open(myWorkList[id][4], '_blank');
+            })
 
             $(".ytbut").on("click", function () {
                 var id = $(this).attr('id');
@@ -163,6 +171,12 @@
                 $(".ytvid").attr('src', "");
                 $(".ytborder").css("display", "none");
             })
+            
+            var hash = location.hash;
+            var offset = $(hash).offset();
+            $('html, body').animate({
+                scrollTop: offset.top
+            });
         });
 
     </script>

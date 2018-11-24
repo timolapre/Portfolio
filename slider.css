@@ -1,3 +1,18 @@
+:root{
+    --green: #41c97f;
+    --black: black;
+    --white: white;
+    --grey: #364347;
+    --shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+*{
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 .skillpage .right{
     left: 20px;
 }
@@ -75,34 +90,6 @@
 
 .arrows .a2{
     right: 100px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-:root{
-    --green: #41c97f;
-    --black: black;
-    --white: white;
-    --grey: #364347;
-    --shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.3);
-}
-
-*{
-    font-family: 'Raleway', sans-serif;
-    margin: 0;
-    padding: 0;
-    list-style: none;
 }
 
 button{

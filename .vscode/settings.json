@@ -1,5 +1,5 @@
 {
     "git.ignoreLimitWarning": true,
-    "php.validate.executablePath": "C:/Users/timol/Downloads/php-7.2.9-nts-Win32-VC15-x64/php.exe",
-    "php.executablePath": "C:/Users/timol/Downloads/php-7.2.9-nts-Win32-VC15-x64/php.exe"
+    "php.validate.executablePath": "E:/Downloads/php-7.2.9-nts-Win32-VC15-x64/php.exe",
+    "php.executablePath": "E:/Downloads/php-7.2.9-nts-Win32-VC15-x64/php.exe"
 }

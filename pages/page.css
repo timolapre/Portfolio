@@ -29,7 +29,7 @@
 
 .page .grid{
     position: relative;
-    width: 50vw;
+    width: 70vw;
     display: grid;
     grid-template-columns: 50% 50%;
 }
@@ -40,7 +40,7 @@
 
 .page .grid .images{
     height: 400px;
-    width: 300px;
+    width: 100%;
 }
 
 .page .grid .images .img{
@@ -95,7 +95,7 @@
         margin: 1rem;
     }
     .page .grid{
-        width: 100vw;
+        width: 90vw;
         display: grid;
         grid-template-columns: 50% 50%;
     }
@@ -111,5 +111,10 @@
     }
 }
 @media only screen and (max-width: 664px) {
-
+    .page .grid{
+        position: relative;
+        width: 70vw;
+        display: block;
+        grid-template-columns: 50% 50%;
+    }
 }
