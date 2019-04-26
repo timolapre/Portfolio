@@ -23,7 +23,12 @@ $(document).ready(function () {
                     ["Videos", "Images/youtube.png", "light","", "Go to channel","https://www.youtube.com/channel/UC4bASN3cdeMrncX6Sg2Ijdw", "YouTube",
     "There are a lot of other projects I worked on. Not all are big or good enough to put on my resume but it might still be worth watching some videos of my other work."],
                     ["Asteroids", "Images/asteroids.png", "light","https://www.youtube.com/embed/SMYNo1q6lwA", "View Code","https://github.com/timolapre/Asteroids-Haskell", "Haskell",
-    "The asteroids game is completely made from scratch with Haskell. This project was a project for the university."],]
+    "The asteroids game is completely made from scratch with Haskell. This project was a project for the university."],
+                    ["Toilet Freshener", "Images/toiletfreshener.png", "light","", "View Code", "https://github.com/timolapre/AutoToiletRefresher", "Arduino, C",
+    "With an arduino and multiple sensors I created a smart toilet freshener which could detect the difference between a number 1, number 2 and cleaning the toilet and depending on this spray x times."],
+                    ["Neural networks", "Images/neuralnetwork.png", "black","", "View Code","https://github.com/timolapre/NeuralNetworks", "Python, Tensorflow",
+    "A neural network for recognizing digits and for simple shapes"],
+]
 
     listlength = myWorkList.length + 5;
     check = listlength;
